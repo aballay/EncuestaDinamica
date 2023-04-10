@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+  }
+  
+  .pool-container {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-width: 1024px;
+    justify-content: center;
+    width: 100%;
+  }
+  #questionText{
+    text-align: center;
+  }
+  
+  .question-container,
+  .answer-container,
+  .pool-paginator {
+    margin-bottom: 1rem;
+  }
+  
+  .question-container {
+    font-size: 1.3rem;
+    color: #333333;
+  }
+  
+  .answer-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: space-evenly;
+  }
+  
+  .answer-button {
+    background-color: #f5e7ea;
+    color: #333333;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 14vw;
+    height: 28vh;
+  }
+  
+  .answer-button:hover {
+    background-color: #eab5bb;
+  }
+  
+  .paginator-buttons-c {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #pag-btn-prev,
+  #pag-btn-next {
+    background-color: #d7ebdd;
+    color: #333333;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #pag-btn-prev:hover,
+  #pag-btn-next:hover {
+    background-color: #b7d5b8;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .pool-container {
+      padding: 1rem;
+    }
+  
+    .question-container,
+    .answer-container {
+      text-align: center;
+    }
+  }
+  
+  header {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+    color: #333333;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #b7d5b8;
+  }
+  
+  @media screen and (max-width: 768px) {
+    header h1 {
+      font-size: 1.2rem;
+    }
+  
+    nav ul li a {
+      font-size: 0.9rem;
+    }
+  }

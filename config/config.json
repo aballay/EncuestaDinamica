@@ -1,0 +1,122 @@
+{
+    "root": "animal",
+    "questions": [
+        {
+            "id": "animal",
+            "question": "¿Qué tipo de mascota tienes?",
+            "answers": [
+                {
+                    "answer": "Perrito",
+                    "image": "./img/mediano.jpg",
+                    "next": "tamPerro"
+                },
+                {
+                    "answer": "Gatito",
+                    "image": "./img/cat.jpg",
+                    "next": "tamGato"
+                }
+               
+            ]
+        },
+        {
+            "id": "tamPerro",
+            "question": "¿Cuál es el tamaño de tu perro?",
+            "answers": [
+                {
+                    "answer": "Grande",
+                    "image": "./img/dog-grande.jpg",
+                    "next": "mordida"
+                },
+                {
+                    "answer": "Mediano",
+                    "image": "./img/mediano.jpg",
+                    "next": "mordida"
+                },
+                {
+                    "answer": "Chico",
+                    "image": "./img/dog-chico.jpg",
+                    "next": "mordida"
+                }
+            ]
+        },
+        {
+            "id": "tamGato",
+            "question": "¿Cuál es el tamaño de tu gato?",
+            "answers": [
+                {
+                    "answer": "Estandar",
+                    "image": "",
+                    "next": "etapaVida"
+                },
+                {
+                    "answer": "Pequeño",
+                    "image": "",
+                    "next": "etapaVida"
+                }
+            ]
+        },
+        {
+            "id": "mordida",
+            "question": "¿Qué tipo de mordida tiene tu perro?",
+            "answers": [
+                {
+                    "answer": "Pequeña",
+                    "image": "",
+                    "next": "etapaVida"
+                },
+                {
+                    "answer": "Grande",
+                    "image": "",
+                    "next": "etapaVida"
+                }
+            ]
+        },
+        {
+            "id": "etapaVida",
+            "question": "¿En qué etapa de vida se encuentra tu mascota?",
+            "answers": [
+                {
+                    "answer": "Cachorro",
+                    "image": "",
+                    "next": "lineaAlimento"
+                },
+                {
+                    "answer": "Adulto",
+                    "image": "",
+                    "next": "lineaAlimento"
+                },
+                {
+                    "answer": "Adulto Mayor",
+                    "image": "",
+                    "next": "lineaAlimento"
+                }
+            ]
+        },
+        {
+            "id" : "lineaAlimento",
+            "question" : "¿Qué marca de alimento prefieres para tu mascota?",
+            "answers" : [
+                {
+                    "answer":"Pedigree",
+                    "image" : "",
+                    "next" : null
+                },
+                {
+                    "answer":"Sabrositos",
+                    "image" : "",
+                    "next" : null
+                },
+                {
+                    "answer":"Natural Choice",
+                    "image" : "",
+                    "next" : null
+                },
+                {
+                    "answer":"Pedigree",
+                    "image" : "",
+                    "next" : null
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+Guía de uso y configuración del archivo config.json para el árbol de decisiones
+
+El archivo config.json contiene la estructura del árbol de decisiones que se utilizará en la aplicación. 
+A continuación, se muestra un ejemplo de cómo utilizarlo y cómo agregar nuevas preguntas y respuestas.
+
+Ejemplo de archivo config.json:
+
+{
+    "root": "animal",
+    "questions": [
+        {
+            "id": "animal",
+            "question": "¿Cuál es su animal?",
+            "answers": [
+                {
+                    "answer": "Perro",
+                    "image": "./img/mediano.jpg",
+                    "next": "tamPerro"
+                },
+                {
+                    "answer": "Gato",
+                    "image": "./img/cat.jpg",
+                    "next": "tamGato"
+                },
+                {
+                    "answer": "Otro",
+                    "image": "",
+                    "next": null
+                }
+            ]
+        },
+        ...
+    ]
+}
+
+Explicación de las propiedades en config.json:
+
+- root: Esta propiedad contiene el ID de la pregunta raíz del árbol de decisiones. En el ejemplo anterior, "animal" es la pregunta raíz.
+
+- questions: Este es un arreglo que contiene objetos con la información de cada pregunta en el árbol de decisiones. 
+            Cada objeto contiene las siguientes propiedades:
+
+    - id: Identificador único de la pregunta. Este ID se utiliza para referenciar a las preguntas en el árbol de decisiones.
+
+    - question: Texto de la pregunta.
+
+    - answers: Arreglo que contiene objetos con información de las respuestas para la pregunta. Cada objeto contiene las siguientes propiedades:
+
+        - answer: Texto de la respuesta.
+
+        - image: Ruta de la imagen asociada con la respuesta (si corresponde).
+
+        - next: ID de la siguiente pregunta en el árbol de decisiones después de seleccionar esta respuesta.
+                 Si esta respuesta es una hoja en el árbol (no tiene más preguntas siguientes), usar "null".
+
+Agregar nuevas preguntas y respuestas:
+
+1. Para agregar una nueva pregunta, crea un nuevo objeto en el arreglo "questions". Asegúrate de asignar un ID único a la nueva pregunta.
+
+2. Agrega las respuestas correspondientes a la pregunta en el arreglo "answers". 
+Incluye el texto de la respuesta, la ruta de la imagen (si corresponde) y el ID de la siguiente pregunta (si corresponde).
+
+3. Si una respuesta existente debe llevar a la nueva pregunta, actualiza la propiedad "next" de esa respuesta con el ID de la nueva pregunta.
+
+4. Si la nueva pregunta debe ser la raíz del árbol de decisiones,
+ actualiza la propiedad "root" en el archivo config.json con el ID de la nueva pregunta.
